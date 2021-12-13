@@ -83,9 +83,11 @@ function SearchApi() {
             var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
             productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                             <div  class="single-product">
+                            <a href="./Product/index.html?product=${product.id}">
                                 <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat;  background-size: 197px 250px">
                                 <span class="discount">${product.discount}% Descuento!</span>
                                 </div>
+                            </a>
                                 <div class="part-2">
                                     <h3 class="product-title">${product.name}</h3>
                                     <h4 class="product-old-price">$${oldPrice}</h4>
@@ -97,8 +99,10 @@ function SearchApi() {
         }else{
             productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                 <div class="single-product">
+                                    <a href="./Product/index.html?product=${product.id}">
                                     <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat; background-size: 197px 250px">
                                     </div>
+                                    </a>
                                     <div class="part-2">
                                         <h3 class="product-title">${product.name}</h3>
                                         <h4 class="product-price">$${product.price}</h4>
@@ -184,9 +188,11 @@ function SearchApi() {
                         var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
                         productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                         <div  class="single-product">
+                                            <a href="./Product/index.html?product=${product.id}">
                                             <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat;  background-size: 197px 250px">
                                             <span class="discount">${product.discount}% Descuento!</span>
                                             </div>
+                                            </a>
                                             <div class="part-2">
                                                 <h3 class="product-title">${product.name}</h3>
                                                 <h4 class="product-old-price">$${oldPrice}</h4>
@@ -198,8 +204,10 @@ function SearchApi() {
                     }else{
                         productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                             <div class="single-product">
+                                                <a href="./Product/index.html?product=${product.id}">
                                                 <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat; background-size: 197px 250px">
                                                 </div>
+                                                </a>
                                                 <div class="part-2">
                                                     <h3 class="product-title">${product.name}</h3>
                                                     <h4 class="product-price">$${product.price}</h4>
@@ -266,9 +274,11 @@ function SearchApi() {
                             var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
                             productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                             <div  class="single-product">
+                                            <a href="./Product/index.html?product=${product.id}">
                                                 <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat;  background-size: 197px 250px">
                                                 <span class="discount">${product.discount}% Descuento!</span>
                                                 </div>
+                                            </a>
                                                 <div class="part-2">
                                                     <h3 class="product-title">${product.name}</h3>
                                                     <h4 class="product-old-price">$${oldPrice}</h4>
@@ -280,8 +290,10 @@ function SearchApi() {
                         }else{
                             productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                                 <div class="single-product">
+                                                <a href="./Product/index.html?product=${product.id}">
                                                     <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat; background-size: 197px 250px">
                                                     </div>
+                                                </a>
                                                     <div class="part-2">
                                                         <h3 class="product-title">${product.name}</h3>
                                                         <h4 class="product-price">$${product.price}</h4>
@@ -360,9 +372,11 @@ function SearchApi() {
                var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                <div  class="single-product">
+                               <a href="./Product/index.html?product=${product.id}">
                                    <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat;  background-size: 197px 250px">
                                    <span class="discount">${product.discount}% Descuento!</span>
                                    </div>
+                                </a>
                                    <div class="part-2">
                                        <h3 class="product-title">${product.name}</h3>
                                        <h4 class="product-old-price">$${oldPrice}</h4>
@@ -374,8 +388,10 @@ function SearchApi() {
            }else{
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                    <div class="single-product">
+                                   <a href="./Product/index.html?product=${product.id}">
                                        <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat; background-size: 197px 250px">
                                        </div>
+                                    </a>
                                        <div class="part-2">
                                            <h3 class="product-title">${product.name}</h3>
                                            <h4 class="product-price">$${product.price}</h4>
@@ -443,9 +459,11 @@ function SearchApi() {
                var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                <div  class="single-product">
+                               <a href="./Product/index.html?product=${product.id}">
                                    <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat;  background-size: 197px 250px">
                                    <span class="discount">${product.discount}% Descuento!</span>
                                    </div>
+                                </a>
                                    <div class="part-2">
                                        <h3 class="product-title">${product.name}</h3>
                                        <h4 class="product-old-price">$${oldPrice}</h4>
@@ -457,8 +475,10 @@ function SearchApi() {
            }else{
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                    <div class="single-product">
+                                   <a href="./Product/index.html?product=${product.id}">
                                        <div class="part-1"  style="background-image: url('${img}'); background-repeat: no-repeat; background-size: 197px 250px">
                                        </div>
+                                    </a>
                                        <div class="part-2">
                                            <h3 class="product-title">${product.name}</h3>
                                            <h4 class="product-price">$${product.price}</h4>
@@ -519,9 +539,11 @@ function SearchApi() {
                var oldPrice = Math.trunc((product.price * 100)/ (100-product.discount));
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                <div  class="single-product">
+                               <a href="./Product/index.html?product=${product.id}">
                                    <div class="part-1"  style="background-image: url('${product.urlImage}'); background-repeat: no-repeat;">
                                    <span class="discount">${product.discount}% Descuento!</span>
                                    </div>
+                                </a>
                                    <div class="part-2">
                                        <h3 class="product-title">${product.name}</h3>
                                        <h4 class="product-old-price">$${oldPrice}</h4>
@@ -533,8 +555,10 @@ function SearchApi() {
            }else{
                productsCard += `<div class="col-md-6 col-lg-4 col-xl-3">
                                    <div class="single-product">
+                                   <a href="./Product/index.html?product=${product.id}">
                                        <div class="part-1"  style="background-image: url('${product.urlImage}'); background-repeat: no-repeat;">
                                        </div>
+                                    </a>
                                        <div class="part-2">
                                            <h3 class="product-title">${product.name}</h3>
                                            <h4 class="product-price">$${product.price}</h4>
