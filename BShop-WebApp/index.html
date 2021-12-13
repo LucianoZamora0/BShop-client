@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>BShop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Sources/Style/general.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="Sources/Scripts/Index.js"></script>
+  <script src="Sources/Scripts/Search.js"></script>
+</head>
+<body >
+
+
+<nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top" >
+  <img src="Sources/Images/logo2.png" width="200px" height="100px" >
+
+  <!-- Links -->
+  <ul class="navbar-nav ">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categorías
+      </a>
+      <div id="menu"class="dropdown-menu" aria-labelledby="navbarDropdown">
+      </div>
+    </li>
+    
+  </ul>
+  <div class="topnav-centered">
+  
+    <input id="buscador"class="form-control mr-sm-6" type="text" placeholder="¿Buscas algo?" onchange="homeIndex.save()" >
+    
+  </div>
+  <div class="topnav-centered">
+    <button class="btn btn-dark"  onclick="homeIndex.go()" >Buscar</button>
+  </div>
+
+</nav>
+<div class="container">
+    <section class="section-products">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="header">
+                        <h2>Aprovecha nuestras ofertas especiales!</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="productContainer">
+
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script id="initScript" type="text/javascript">
+
+    $(document).ready( function () {
+        homeIndex =  new IndexApi();
+        homeIndex.init();
+        homeIndex.categories();
+        homeIndex.products();
+        $('#initScript').html("");
+    });
+
+</script>
+
+</body>
+</html>

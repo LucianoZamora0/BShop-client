@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>BShop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../Sources/Style/general.css">
+  <link rel="stylesheet" href="../../Sources/Style/search.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="../../Sources/Scripts/Index.js"></script>
+  <script src="../../Sources/Scripts/Search.js"></script>
+  <script src="../../Sources/Scripts/slider.js"></script>
+</head>
+<body >
+
+
+<nav class="navbar navbar-expand-sm bg-light justify-content-center sticky-top" >
+  <img src="../../Sources/Images/logo2.png" width="200px" height="100px" >
+
+  <!-- Links -->
+  <ul class="navbar-nav ">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categorías
+      </a>
+      <div id="menu"class="dropdown-menu" aria-labelledby="navbarDropdown">
+      </div>
+    </li>
+    
+  </ul>
+  <div class="topnav-centered">
+  
+    <input id="buscador"class="form-control mr-sm-6" type="text" placeholder="¿Buscas algo?" onchange="homeIndex.save()" >
+    
+  </div>
+  <div class="topnav-centered">
+    <button class="btn btn-dark"  onclick="homeIndex.go()" >Buscar</button>
+  </div>
+
+</nav>
+<div class="container">
+    <div class="sidenav" >
+        <h4 style="text-align: center;">Filtros</h4>
+        <br>
+        <h6 class="font-weight-bold mb-3" style="text-align: center;">Categoria</h6>
+        <div id="filtro"></div>
+        <br>
+        <h6 class="font-weight-bold mb-3" style="text-align: center;">Precio</h6>
+        <div class="row">
+        <div class="col-sm-10" style="margin-left: 20px;">
+            <div id="slider-range"></div>
+        </div>
+        </div>
+        <div class="row slider-labels" style="margin-left: 20px;">
+          <div class="col-xs-6 caption">
+              <strong>Min:</strong> <span id="slider-range-value1"></span>
+          </div>
+          <div class="col-xs-6 text-right caption">
+              <strong>Max:</strong> <span id="slider-range-value2"></span>
+          </div>
+        </div>
+        <br>
+        <diV style="text-align: center;">
+        <button class="btn btn-secondary"onclick="searchIndex.filterByPrice()">Filtrar por precio</button>
+      </diV>
+    </div>
+    <div class="main" style="margin-top: -250px;">
+        <section class="section-products" >
+            <div class="container">
+
+                <div class="row" id="productContainer">
+
+                </div>
+                <br>
+                <nav aria-label="Page navigation example">
+                  <ul id="paginator"class="pagination justify-content-center">
+                    
+                  </ul>
+                </nav>
+
+            </div>
+        </section>
+  </div>
+</div>
+
+<script id="initScript" type="text/javascript">
+
+    $(document).ready( function () {
+        homeIndex =  new IndexApi();
+        homeIndex.init();
+        homeIndex.categories();
+
+        searchIndex = new SearchApi();
+        searchIndex.getCategoryFilter();
+        
+        $('#initScript').html("");
+
+    });
+
+
+</script>
+
+</body>
+</html>
