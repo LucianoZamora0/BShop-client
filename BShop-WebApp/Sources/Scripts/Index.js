@@ -42,7 +42,7 @@ function IndexApi() {
             method: "GET",
             dataType: "json",
             crossDomain: true,
-            url: `http://lucisno-001-site1.ftempurl.com/api/Category/GetAll`
+            url: `https://lucisno-001-site1.ftempurl.com/api/Category/GetAll`
         });
         
         var categoriesDropDown = "";
@@ -74,7 +74,7 @@ function IndexApi() {
             method: "GET",
             dataType: "json",
             crossDomain: true,
-            url: `http://lucisno-001-site1.ftempurl.com/api/Product/GetAll`,
+            url: `https://lucisno-001-site1.ftempurl.com/api/Product/GetAll`,
             data: {
                 start: 0,
                 end: 12
